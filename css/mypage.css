@@ -1,0 +1,213 @@
+.topContainer {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 832px;
+}
+
+.upperContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 15%;
+    margin: 1% 0;
+}
+
+.upperContainerLeft {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    height: 100%;
+}
+
+.upperContainerLeft button {
+    width: 50%;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(to right, #00c6ff, #eb0ef2);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.upperContainerLeft button:hover {
+    background: linear-gradient(to right, #09eb9c, #ff8c00);
+    color: black;
+}
+
+.upperContainerRight {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 65%;
+    height: 100%;
+}
+
+.upperContainerRight input {
+    width: 50%;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    font-size: 16px;
+    color: white;
+}
+
+.upperContainerRight input::placeholder {
+    color: rgba(206, 232, 255, 0.5);
+    letter-spacing: 2px;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.upperContainerRight input:focus {
+    color: rgba(143, 200, 253, 1);
+    outline: none;
+    border-bottom: 1.2px solid rgba(27, 219, 244);
+    font-size: 18px;
+    transition: .8s all ease;
+}
+
+.upperContainerRight input:focus::placeholder {
+    opacity: 0;
+}
+
+.upperContainerRight button {
+    width: 20%;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    background: white;
+    font-size: 20px;
+    cursor: pointer;
+    color: black;
+}
+
+.upperContainerRight button:hover {
+    background: #00c6ff;
+    color: white;
+}
+
+.communities {
+    width: 90%;
+    height: 500px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.community-item {
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: calc(20% - 10px);
+    /* 4 items per row with a 10px gap */
+}
+
+.community-button {
+    width: 100%;
+    height: auto;
+    background: transparent;
+    border: none;
+}
+
+.community-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    background-color: #2980b9;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+
+.pagination button:hover {
+    background-color: white;
+    color: #2980b9;
+}
+
+.pagination button:disabled {
+    background-color: #7f8c8d;
+    cursor: not-allowed;
+}
+
+.pagination span {
+    color: white;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-style {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popup-button {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.popup-content p {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.popup-content button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#join-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#cancel-button {
+    background-color: #f44336;
+    color: white;
+}

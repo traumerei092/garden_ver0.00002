@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GARDEN</title>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+</head>
+<body>
+    <header>
+        <div class="headerLeft">
+            <a href="index.html"><img src="img/garden_logo_orkney_font_fixed.png" alt=""></a>
+        </div>
+        <div class="headerCenter">
+        </div>
+        <div class="headerRight">
+        </div>
+    </header>
+    <div class="topMessage">
+        <p>ENCOUNTERS ADD COLOR TO YOUR LIFE</p>
+    </div>
+    <div class="topContainer">
+        <div class="topLeft">
+            <div class="tab-buttons">
+                <button id="login-tab">Log in</button>
+                <button id="signup-tab">Sign Up</button>
+            </div>
+            <div class="form-container active" id="login-form-container">
+                <form id="login-form" class="login-form">
+                    <h2>Log in</h2>
+                    <input type="email" id="login-email" placeholder="Email" required>
+                    <input type="password" id="login-password" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+            <div class="form-container" id="signup-form-container">
+                <form id="signup-form" class="signup-form">
+                    <h2>Sign Up</h2>
+                    <div class="signup">
+                        <input type="text" id="signup-name" placeholder="Name" required>
+                        <input type="text" id="signup-id" placeholder="ID" required>
+                    </div>
+                    <div class="signup">
+                        <input type="email" id="signup-email" placeholder="Email" required>
+                        <input type="password" id="signup-password" placeholder="Password" required>
+                    </div>
+                    <button type="submit">Sign Up</button>
+                    <a href=""></a>
+                </form>
+            </div>
+        </div>
+        <div class="topRight">
+            <img src="img/garden_icon.png" alt="">
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!-- community.html -->
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Community</title>
+    <!-- Firebase and Firestore SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- 自分のJavaScriptファイルをインクルード -->
+    <script src="js/community.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/community.css" />
+</head>
+
+<body>
+    <header>
+        <div class="headerLeft">
+            <a href="index.html"><img src="img/garden_logo_orkney_font_fixed.png" alt=""></a>
+        </div>
+        <div class="headerCenter">
+        </div>
+        <div class="headerRight">
+            <p id="user-info"></p>
+        </div>
+    </header>
+    <div class="container">
+        <p>Create Community</p>
+        <form id="create-community-form" class="create-community-form">
+            <input type="text" id="community-name" placeholder="Community Name" required>
+            <textarea id="community-description" placeholder="Community Description" required></textarea>
+            <button type="submit">Create</button>
+        </form>
+        <button id="back-button" class="back-button">← Back to MyPage</button>
+        <p id="create-community-status"></p>
+    </div>
+</body>
+
+</html>

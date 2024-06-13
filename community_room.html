@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Room</title>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/community_room.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/community_room.css" />
+</head>
+
+<body>
+    <header>
+        <div class="headerLeft">
+            <a href="index.html"><img src="img/garden_logo_orkney_font_fixed.png" alt=""></a>
+        </div>
+        <div class="headerCenter">
+            <h2 id="community-name">Community: コミュニティ名</h2>
+        </div>
+        <div class="headerRight">
+            <p id="user-info"></p>
+        </div>
+    </header>
+    <div class="back-button-container">
+        <div class="back-button-container-left">
+            <button id="back-button" class="back-button">← Back to MyPage</button>
+        </div>
+        <div class="back-button-container-center"></div>
+        <div class="back-button-container-right">
+            <button id="travel-button" class="active-button">Plan to Travel</button>
+            <button id="party-button" class="active-button">Plan to Party</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <div class="buttons">
+                <button id="create-talkroom-button" class="action-button">Create Talk Room</button>
+                <button id="invite-member-button" class="action-button" style="display: none;">Invite New Member</button>
+            </div>
+            <div class="sidebar-content">
+                <div class="tabs">
+                    <button class="tab-button active" data-tab="talk-rooms">Talk Room</button>
+                    <button class="tab-button" data-tab="community-members">Community Member</button>
+                </div>
+                <div class="tab-content" id="talk-rooms">
+                    <!-- ここにトークルーム -->
+                </div>
+                <div class="tab-content" id="community-members" style="display: none;">
+                    <!-- ここにコミュニティメンバー -->
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <div id="talk-room-history" class="talk-room-history"></div>
+            <div id="message-input-container" class="message-input-container">
+                <span id="talk-room-name" class="talk-room-name">Talk Room Name</span>
+                <input type="text" id="message-input" placeholder="Type your message here...">
+                <button id="send-message-button">Send</button>
+            </div>
+            <div class="community-member-info" id="community-member-info" style="display: none;">
+                <!-- メンバー情報 -->
+            </div>
+            <!-- アクティビティ -->
+            <div id="travel-form" class="search-form" style="display: none;">
+                <h3>Hotel Search</h3>
+                <input type="text" id="hotel-destination" placeholder="Destination">
+                <input type="date" id="hotel-checkin" placeholder="Check-in Date">
+                <input type="date" id="hotel-checkout" placeholder="Check-out Date">
+                <button id="search-hotel-button">Search Hotels</button>
+            </div>
+            <div id="party-form" class="search-form" style="display: none;">
+                <h3>Restaurant Search</h3>
+                <input type="text" id="restaurant-location" placeholder="Location">
+                <button id="search-restaurant-button">Search Restaurants</button>
+            </div>
+            <div id="search-results" class="search-results">
+                <!-- 検索結果 -->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

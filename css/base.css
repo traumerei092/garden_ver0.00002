@@ -1,0 +1,61 @@
+body {
+    font-family: 'Orkney', sans-serif;
+    background-color: rgb(14, 31, 62);;
+    /* Dark blue background */
+    color: white;
+    height: 100vh;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    position: fixed;
+    width: 100%;
+}
+
+.headerLeft {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+}
+
+.headerLeft img {
+    width: 170px;
+    margin-left: 50px;
+}
+
+.headerCenter {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerCenter ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.headerCenter a:hover {
+    color: rgba(0, 50, 178, 0.5);
+}
+
+.headerRight {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerRight p {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GARDEN MyPage</title>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/mypage.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/mypage.css" />
+</head>
+<body>
+    <header>
+        <div class="headerLeft">
+            <a href="index.html"><img src="img/garden_logo_orkney_font_fixed.png" alt=""></a>
+        </div>
+        <div class="headerCenter">
+        </div>
+        <div class="headerRight">
+            <p id="user-info"></p>
+        </div>
+    </header>
+    <div class="topContainer">
+        <div class="upperContainer">
+            <div class="upperContainerLeft">
+                <button type="submit" id="create-community-button">Create Community</button>
+            </div>
+            <div class="upperContainerRight">
+                <input type="text" id="search-community" placeholder="Search Community" required>
+                <button type="submit" id="search-community-button">SEARCH</button>
+            </div>
+        </div>
+        <div class="communities"></div>
+        <div class="pagination">
+            <button id="prev-page" disabled>Previous</button>
+            <span id="page-info"></span>
+            <button id="next-page">Next</button>
+        </div>
+    </div>
+
+    <!-- コミュニティ参加のポップアップ -->
+    <div id="join-popup" class="popup popup-style" style="display: none;">
+        <div class="popup-content">
+            <p>Do you want to join this community?</p>
+            <div class="popup-button">
+                <button id="join-button">Join</button>
+                <button id="cancel-button">Cancel</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
